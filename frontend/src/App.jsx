@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get('https://your-backend-url.onrender.com/api/movies')
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/movies`)
         setMovies(response.data)
         setLoading(false)
       } catch (err) {
